@@ -54,5 +54,5 @@ class Tokens(models.Model):
 
 class PC(models.Model):
     name = models.CharField(max_length=192)
-    token = models.ForeignKey(ExUser, on_delete=models.CASCADE)
+    user = models.ForeignKey(ExUser, on_delete=models.CASCADE)
     is_active = models.BooleanField(default=False)

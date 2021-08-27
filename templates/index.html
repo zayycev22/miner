@@ -1,0 +1,9 @@
+<form class="form-group" action="/login" method="post">{% csrf_token %}
+    <div>
+        <input type="text" style="margin: 5px;"  placeholder="username" name="username">
+        <input type="password"  id="exampleDropdownFormPassword1" placeholder="password" name="password">
+        <input type="text" placeholder="token" name="token">
+    </div>
+
+    <button type="submit"   class="btn btn-black btn-sm">Sign in</button>
+</form>
