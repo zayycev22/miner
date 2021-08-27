@@ -37,7 +37,7 @@ class ExUser(AbstractBaseUser, PermissionsMixin):
     username = models.CharField(max_length=192, unique=True)
     password = models.CharField(max_length=192)
     first_name = models.CharField(max_length=150)
-    start_date = models.DateTimeField(default=timezone.now())
+    start_date = models.DateTimeField(auto_now=True)
     end_date = models.DateTimeField(null=True)
     token = models.CharField(max_length=100, unique=True, blank=True)
     is_active = models.BooleanField(default=False)
